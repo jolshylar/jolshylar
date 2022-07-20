@@ -16,9 +16,7 @@ interface MemberChildProps {
   interests: [];
 }
 
-function Member(props: MemberProps) {
-  const member = props.member;
-
+const Member = ({ member }: MemberProps) => {
   return (
     <div className="p-3 m-4 border-[#282d35] border-2 rounded-[5px] items-center max-w-[260px]">
       <Image
@@ -29,9 +27,7 @@ function Member(props: MemberProps) {
       />
       <div className="content">
         <h2 className="text-center">{member.name}</h2>
-        <h3 className="text-[#faac75] text-center text-4">
-          {member.role}
-        </h3>
+        <h3 className="text-[#faac75] text-center text-4">{member.role}</h3>
         <div className="flex justify-center mt-2">
           <a href={`mailto:${member.email}`}>
             <button className="border-[1.5px] border-[#282d35] rounded-[10px] w-[120px] h-[30px] text-[#282d35] my-0 mx-[2px] hover:bg-[#282d35] hover:text-white flex items-center justify-center gap-2">
@@ -49,6 +45,6 @@ function Member(props: MemberProps) {
       </div>
     </div>
   );
-}
+};
 
 export default Member;
