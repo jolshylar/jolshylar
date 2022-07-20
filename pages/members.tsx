@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import data from "../data/members";
+import data from "../data/members.json";
 import Member from "../components/Member";
 import Head from "next/head";
 
@@ -7,7 +7,7 @@ export default function Members() {
   return (
     <Layout>
       <Head>
-        <title>Projects | Jolshylar</title>
+        <title>Members | Jolshylar</title>
       </Head>
       <div className="bg-white p-5 m-0">
         <h1 className="text-5xl text-[#282d35] text-center font-bold">Our Members</h1>
