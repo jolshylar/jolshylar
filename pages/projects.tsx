@@ -7,14 +7,14 @@ import { useState, useEffect } from "react";
 const Projects: NextPage = () => {
   const [githubData, setGithubData] = useState([]);
 
-  const fetchData = () => {
+  const fetchRepos = () => {
     return fetch("https://api.github.com/users/jolshylar/repos")
       .then((res) => res.json())
       .then((data) => setGithubData(data));
   };
 
   useEffect(() => {
-    fetchData();
+    fetchRepos();
   }, []);
 
   return (
@@ -29,7 +29,7 @@ const Projects: NextPage = () => {
         <div className="flex items-center justify-center">
           <div className="overflow-x-scroll flex flex-nowrap md:grid md:grid-cols-3">
             {githubData.length > 0 &&
-              githubData.map((project) => (
+              githubData.map((project: any) => (
                 <Project key={project.name} project={project} />
               ))}
           </div>

@@ -2,22 +2,7 @@ import { BiLinkExternal } from "react-icons/bi";
 import { AiOutlineStar } from "react-icons/ai";
 import Image from "next/image";
 
-interface ProjectProps {
-  project: RepoProps;
-}
-
-interface RepoProps {
-  name: string;
-  stargazers_count: number;
-  language: string;
-  homepage?: string;
-  html_url: string;
-  description: string;
-}
-
-function Project(props: ProjectProps) {
-  const project: RepoProps = props.project;
-
+function Project({ project }: any) {
   return (
     <div className="p-[1vw] m-[2vw] border-2 border-gray-800 rounded text-center max-w-[260px]">
       <Image
