@@ -1,14 +1,4 @@
-interface InterestProps {
-  member: InterestChildProps;
-}
-
-interface InterestChildProps {
-  interests: [];
-}
-
-function Interests(props: InterestProps) {
-  const member = props.member;
-
+function Interests({ member }: Member) {
   return (
     <div className="flex flex-wrap max-w-[260px]">
       {member.interests &&

@@ -2,21 +2,7 @@ import { AiTwotoneMail, AiFillInstagram } from "react-icons/ai";
 import Image from "next/image";
 import Interests from "./Interests";
 
-interface MemberProps {
-  member: MemberChildProps;
-}
-
-interface MemberChildProps {
-  element: string;
-  name: string;
-  role: string;
-  email: string;
-  profile: string;
-  quote: string;
-  interests: [];
-}
-
-const Member = ({ member }: MemberProps) => {
+const Member = ({ member }: Member) => {
   return (
     <div className="p-3 m-4 border-[#282d35] border-2 rounded-[5px] items-center max-w-[260px]">
       <Image
