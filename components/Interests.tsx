@@ -4,7 +4,7 @@ function Interests({ member }: Member) {
       {member.interests &&
         member.interests.map((interest) => {
           return (
-            <small className="m-[3px] text-[0.7em] p-[4px] border-[1px] border-[#faac75] rounded-[5px]">
+            <small className="m-1 text-[0.7em] p-1 border-[1px] border-orange rounded-md">
               {interest}
             </small>
           );

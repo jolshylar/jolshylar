@@ -9,8 +9,8 @@ export default function Members() {
       <Head>
         <title>Members | Jolshylar</title>
       </Head>
-      <div className="bg-white p-5 m-0">
-        <h1 className="text-5xl text-[#282d35] text-center font-bold">
+      <div className="p-5 m-0">
+        <h1 className="text-5xl text-center font-bold">
           Our Members
         </h1>
         <div className="flex items-center justify-center">

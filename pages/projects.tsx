@@ -22,10 +22,8 @@ const Projects: NextPage = () => {
       <Head>
         <title>Projects | Jolshylar</title>
       </Head>
-      <div className="bg-white p-5 m-0">
-        <h1 className="text-5xl text-[#282d35] text-center font-bold">
-          Our Projects
-        </h1>
+      <div className="p-5 m-0">
+        <h1 className="text-5xl text-center font-bold">Our Projects</h1>
         <div className="flex items-center justify-center">
           <div className="overflow-x-scroll flex flex-nowrap md:grid md:grid-cols-3">
             {githubData.length > 0 &&
