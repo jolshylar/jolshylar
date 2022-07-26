@@ -1,7 +1,7 @@
-import Layout from "../components/Layout";
-import data from "../data/members.json";
-import Member from "../components/Member";
 import Head from "next/head";
+import Layout from "../components/Layout";
+import MemberCard from "../components/MemberCard";
+import data from "../data/members.json";
 
 export default function Members() {
   return (
@@ -14,7 +14,7 @@ export default function Members() {
         <div className="flex items-center justify-center">
           <div className="overflow-x-scroll flex flex-nowrap md:grid md:grid-cols-3">
             {data.map((member) => (
-              <Member key={member.element} member={member} />
+              <MemberCard key={member.element} member={member} />
             ))}
           </div>
         </div>

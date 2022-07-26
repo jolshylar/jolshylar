@@ -3,9 +3,9 @@ import { AiOutlineStar } from "react-icons/ai";
 import Image from "next/image";
 import Topics from "./Topics";
 
-export default function Project({ project }: any) {
+export default function ProjectCard({ project }: {project: Project}) {
   return (
-    <div className="p-3 m-4 border-2 border-primary rounded-md items-center text-center max-w-[260px] min-w-[260px]">
+    <div className="p-3 m-4 border-2 border-white rounded-md items-center text-center max-w-[260px] min-w-[260px]">
       <Image
         src={`/images/previews/${project.name}.png`}
         width={256}

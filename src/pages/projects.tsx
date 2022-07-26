@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Layout from "../components/Layout";
-import Project from "../components/Project";
+import Project from "../components/ProjectCard";
 
 export async function getStaticProps() {
   const res = await fetch("https://api.github.com/users/jolshylar/repos");
