@@ -8,16 +8,16 @@ export default function Navbar() {
         <Image
           className="cursor-pointer"
           src="/images/logo.png"
-          height={56}
-          width={212}
+          height={51}
+          width={192}
         />
       </Link>
-      <div className="flex gap-4 font-bold text-logo text-2xl">
+      <div className="flex gap-4 font-bold text-primary text-xl sm:text-2xl">
         <Link href="/projects">
-          <a>/projects</a>
+          <a>Projects</a>
         </Link>
         <Link href="/members">
-          <a>/members</a>
+          <a>Members</a>
         </Link>
       </div>
     </nav>
