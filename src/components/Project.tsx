@@ -1,8 +1,9 @@
 import { BiLinkExternal } from "react-icons/bi";
 import { AiOutlineStar } from "react-icons/ai";
 import Image from "next/image";
+import Topics from "./Topics";
 
-function Project({ project }: any) {
+export default function Project({ project }: any) {
   return (
     <div className="p-3 m-4 border-2 border-primary rounded-md items-center text-center max-w-[260px] min-w-[260px]">
       <Image
@@ -24,15 +25,13 @@ function Project({ project }: any) {
           className="flex justify-center my-2"
           href={project.homepage || project.html_url}
         >
-          <button className="flex items-center justify-center border-2 border-primary rounded-3xl w-[124px] h-[30px] no-underline hover:text-bg hover:bg-primary hover:duration-500">
+          <button>
             <BiLinkExternal /> Visit
           </button>
         </a>
         <p>{project.description}</p>
-        <small className="text-orange">{project.topics.join(", ")}</small>
+        <Topics topics={project.topics} />
       </div>
     </div>
   );
 }
-
-export default Project;

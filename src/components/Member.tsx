@@ -1,6 +1,6 @@
 import { AiTwotoneMail, AiFillInstagram } from "react-icons/ai";
 import Image from "next/image";
-import Interests from "./Interests";
+import Topics from "./Topics";
 
 const Member = ({ member }: Member) => {
   return (
@@ -27,7 +27,7 @@ const Member = ({ member }: Member) => {
           </a>
         </div>
         <p className="leading-1 text-center mt-1">{member.quote}</p>
-        <Interests key={member.name} member={member} />
+        <Topics key={member.name} topics={member.interests} />
       </div>
     </div>
   );

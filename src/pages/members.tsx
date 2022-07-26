@@ -10,9 +10,7 @@ export default function Members() {
         <title>Members | Jolshylar</title>
       </Head>
       <div className="p-5 m-0">
-        <h1 className="text-5xl text-center font-bold">
-          Our Members
-        </h1>
+        <h1 className="text-5xl text-center font-bold my-4">Our Members</h1>
         <div className="flex items-center justify-center">
           <div className="overflow-x-scroll flex flex-nowrap md:grid md:grid-cols-3">
             {data.map((member) => (

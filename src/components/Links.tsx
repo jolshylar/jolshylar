@@ -4,10 +4,8 @@ import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
 function Links() {
   const styles = { width: 18, height: 18 };
   return (
-    <div className="bg-hero-mirror bg-center h-[600px] pt-[10vh]">
-      <h1 className="m-auto text-center text-5xl font-bold py-4 max-w-[720px]">
-        As of today, Jolshylar team has 10 members (2 working actually).
-        <br />
+    <div className="bg-bg h-[600px] pt-[10vh]">
+      <h1>
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink to-blue">
           You can contact us via links below:
         </span>
