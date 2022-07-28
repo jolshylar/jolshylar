@@ -6,10 +6,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        hero: "url('/images/bg.png')",
-        "hero-mirror": "url('/images/mirrorbg.png')",
-      },
       colors: {
         bg: "#282d35",
         primary: "#61dafb",
