@@ -11,7 +11,7 @@ export default function About() {
       </h1>
       <div className="flex justify-center">
         <a href="https://www.instagram.com/jolshylar/">
-          <button className="mt-4 text-2xl w-40 h-12">
+          <button className="text-2xl w-40 h-12">
             <AiFillInstagram style={{ width: 24, height: 24 }} />
             More
           </button>
