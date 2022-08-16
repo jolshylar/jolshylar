@@ -4,7 +4,7 @@ import Topics from "./Topics";
 
 export default function MemberCard({ member }: Member) {
   return (
-    <div className="p-3 m-4 border-white border-2 rounded-md items-center max-w-[260px]">
+    <div className="p-3 m-4 border-gray-400 border-[1px] rounded-md items-center max-w-[260px]">
       <Image
         src={`/images/members/${member.element}.png`}
         width={256}

@@ -1,9 +1,12 @@
-export default function Topics({ topics }: any) {
+export default function Topics({ topics }: { topics: string[] }) {
   return (
-    <div className="flex flex-wrap max-w-[260px]">
+    <div className="flex flex-wrap">
       {topics &&
-        topics.map((topic: string) => (
-          <span className="m-1 text-[0.7em] p-1 border-[1px] border-secondary rounded-md">
+        topics.map((topic) => (
+          <span
+            key={topic}
+            className="m-1 text-xs p-1 border-[1px] border-secondary rounded-md"
+          >
             {topic}
           </span>
         ))}

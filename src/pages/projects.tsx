@@ -4,17 +4,14 @@ import Layout from "../components/Layout";
 import Project from "../components/ProjectCard";
 
 export async function getStaticProps() {
-  const res = await fetch("https://api.github.com/users/jolshylar/repos");
-  const repos = await res.json();
+  const response = await fetch("https://api.github.com/users/jolshylar/repos");
+  const repos = await response.json();
 
-  return {
-    props: {
-      repos,
-    },
-  };
+  return { props: { repos } };
 }
 
 const Projects: NextPage = ({ repos }: any) => {
+  const projects = repos.filter((repo: any) => !repo.archived);
   return (
     <Layout>
       <Head>
@@ -24,8 +21,8 @@ const Projects: NextPage = ({ repos }: any) => {
         <h1 className="text-5xl text-center font-bold my-4">Our Projects</h1>
         <div className="flex items-center justify-center">
           <div className="overflow-x-scroll flex flex-nowrap md:grid md:grid-cols-3">
-            {repos &&
-              repos.map((project: any) => (
+            {projects &&
+              projects.map((project: any) => (
                 <Project key={project.name} project={project} />
               ))}
           </div>
