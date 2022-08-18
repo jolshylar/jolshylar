@@ -6,7 +6,7 @@ function About() {
   return (
     <div
       id="about"
-      className="flex flex-col items-center justify-center min-h-screen p-4 gap-10"
+      className="flex flex-col items-center justify-center min-h-screen py-16 gap-10"
     >
       <div className="text-center max-w-[60ch] mx-auto">
         <h1 className="text-5xl font-extrabold">What is Jolshylar?</h1>
