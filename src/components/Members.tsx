@@ -38,7 +38,9 @@ function MemberCard({ member }: { member: Member }) {
 export default function Members({ members }: { members: Member[] }) {
   return (
     <div id="members" className="py-16 m-0 min-h-screen">
-      <h1 className="text-5xl text-center font-extrabold my-4">Our Members</h1>
+      <h1 className="text-3xl sm:text-5xl text-center font-extrabold my-4">
+        Our Members
+      </h1>
       <div className="flex items-center justify-center">
         <div className="overflow-x-scroll flex flex-nowrap md:grid md:grid-cols-3">
           {members.map((member) => (

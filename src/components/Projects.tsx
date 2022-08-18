@@ -4,7 +4,7 @@ import Topics from "./Topics";
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="p-3 m-4 border-[1px] border-gray-400 rounded-md items-center min-w-[260px]">
+    <div className="p-3 m-4 border-[1px] border-gray-400 rounded-md items-center min-w-[260px] max-w-[260px]">
       <div className="repo-card" data-repo="jolshylar/jazbahana" />
       <div className="flex items-center gap-2 mx-1">
         <BiBookBookmark className="w-5 h-5" />
@@ -36,8 +36,10 @@ function ProjectCard({ project }: { project: Project }) {
 const Projects = ({ repos }: any) => {
   const projects = repos.filter((repo: any) => !repo.archived);
   return (
-    <div className="p-5 m-0">
-      <h1 className="text-5xl text-center font-extrabold my-4">Our Projects</h1>
+    <div id="projects" className="m-0">
+      <h1 className="text-3xl sm:text-5xl text-center font-extrabold my-4">
+        Our Projects
+      </h1>
       <div className="flex items-center justify-center">
         <div className="overflow-x-scroll flex flex-nowrap md:grid md:grid-cols-3">
           {projects &&
