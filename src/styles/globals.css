@@ -5,12 +5,6 @@
 @layer base {
   html,
   body {
-    @apply p-0 m-0 text-white bg-[#282d35];
-  }
-  h1 {
-    @apply mx-auto text-center text-3xl sm:text-5xl font-bold py-4 max-w-[720px];
-  }
-  a > button {
-    @apply border-2 rounded-xl w-[124px] h-8 flex items-center justify-center gap-2 hover:bg-white hover:text-[#282d35] hover:duration-500;
+    @apply scroll-smooth text-gray-100 bg-gradient-to-r from-black via-gray-900 to-violet-900;
   }
 }
