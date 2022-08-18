@@ -1,6 +1,6 @@
 export default function Topics({ topics }: { topics: string[] }) {
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap justify-center">
       {topics &&
         topics.map((topic) => (
           <span
