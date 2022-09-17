@@ -24,7 +24,10 @@ export default function Members({ members }: { members: MemberProps[] }) {
         <div className="grid md:grid-cols-3">
           {members.length > 0 &&
             members.map((member) => (
-              <div className="p-3 m-4 border-gray-400 border-[1px] rounded-md items-center max-w-[300px]">
+              <div
+                key={member.id}
+                className="p-3 m-4 border-gray-400 border-[1px] rounded-md items-center max-w-[300px]"
+              >
                 <div className="text-center">
                   <h1 className="text-2xl">{member.name}</h1>
                   <span className={HIGHLIGHT}>{member.role}</span>
