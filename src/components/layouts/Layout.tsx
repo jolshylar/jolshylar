@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <title>Jolshylar Homepage</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {children}
+      <main className="p-4">{children}</main>
       <Footer />
     </>
   );

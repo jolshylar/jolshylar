@@ -8,7 +8,6 @@ import {
 import Scroll from "./layouts/Scroll";
 
 export default function Footer() {
-  const iconStyles = { width: 24, height: 24 };
   return (
     <footer className="p-4">
       <div className="flex justify-center gap-4 py-4">
@@ -17,31 +16,31 @@ export default function Footer() {
           rel="noreferrer"
           href="https://github.com/jolshylar/"
         >
-          <IoLogoGithub style={iconStyles} />
+          <IoLogoGithub size={24} />
         </a>
         <a
           target="_blank"
           rel="noreferrer"
           href="https://discord.com/invite/6dSpCGtJuB"
         >
-          <IoLogoDiscord style={iconStyles} />
+          <IoLogoDiscord size={24} />
         </a>
         <a
           target="_blank"
           rel="noreferrer"
           href="https://twitter.com/jolshylar"
         >
-          <IoLogoTwitter style={iconStyles} />
+          <IoLogoTwitter size={24} />
         </a>
         <a
           target="_blank"
           rel="noreferrer"
           href="https://instagram.com/jolshylar"
         >
-          <IoLogoInstagram style={iconStyles} />
+          <IoLogoInstagram size={24} />
         </a>
         <a target="_blank" rel="noreferrer" href="mailto:jolshylar@gmail.com">
-          <IoMail style={iconStyles} />
+          <IoMail size={24} />
         </a>
       </div>
       <p className="text-center py-4">

@@ -1,32 +1,25 @@
 [
   {
-    "element": "food",
-    "name": "Bek Slambek",
+    "id": "1",
+    "name": "Dastan Özgeldi",
     "role": "Full Stack Developer",
-    "interests": ["Figma", "React", "NextJS", "ChakraUI"],
-    "linkedin": "sbek22"
-  },
-  {
-    "element": "aargh",
-    "name": "Dastan Ozgeldi",
-    "role": "Full Stack Developer",
-    "interests": ["NextJS", "Prisma", "PlanetScale", "Supabase", "Figma"],
+    "interests": ["NextJS", "Prisma", "PlanetScale", "Supabase"],
     "linkedin": "dastanozgeldi"
   },
   {
-    "element": "music",
+    "id": "2",
     "name": "Dulat Tursynbai",
     "role": "Design Team",
     "interests": ["Figma"]
   },
   {
-    "element": "jupo",
+    "id": "3",
     "name": "Daryn Zhantileu",
     "role": "Design Team",
     "interests": ["Figma"]
   },
   {
-    "element": "visual",
+    "id": "4",
     "name": "Altynai Zheniskyzy",
     "role": "Project Marketing",
     "interests": ["Instagram", "Twitter"]

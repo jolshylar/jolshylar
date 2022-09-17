@@ -1,16 +1,28 @@
 import { BiBookBookmark } from "react-icons/bi";
 import { IoStar } from "react-icons/io5";
+import { HIGHLIGHT } from "../styles";
 import Topics from "./Topics";
-import H from "./layouts/Text";
 
-function ProjectCard({ project }: { project: Project }) {
+export interface ProjectProps {
+  name: string;
+  description: string;
+  stargazers_count: number;
+  archived: boolean;
+  private: boolean;
+  language: string;
+  homepage: string;
+  html_url: string;
+  topics: string[];
+}
+
+function Project({ project }: { project: ProjectProps }) {
   return (
-    <div className="p-4 m-4 border-[1px] border-gray-400 rounded-md items-center min-w-[260px] max-w-[260px]">
+    <div className="p-4 m-4 border-[1px] border-gray-400 rounded-md items-center">
       {/* Project Header */}
       <div className="flex items-center gap-2">
         <BiBookBookmark className="w-5 h-5" />
         <a href={project.homepage || project.html_url}>
-          <H className="text-2xl">{project.name}</H>
+          <span className={`${HIGHLIGHT} text-2xl`}>{project.name}</span>
         </a>
         <span className="text-sm px-2 border-[1px] rounded-full">
           {project.private ? "Private" : "Public"}
@@ -33,8 +45,8 @@ function ProjectCard({ project }: { project: Project }) {
   );
 }
 
-export default function Projects({ repos }: { repos: Project[] }) {
-  const projects = repos.filter((repo) => !repo.archived);
+export default function Projects({ projects }: { projects: ProjectProps[] }) {
+  const data = projects.filter((repo) => !repo.archived);
   return (
     <div id="projects">
       {/* Title */}
@@ -43,10 +55,10 @@ export default function Projects({ repos }: { repos: Project[] }) {
       </h1>
       {/* Project Cards */}
       <div className="flex items-center justify-center">
-        <div className="overflow-x-scroll flex flex-nowrap md:grid md:grid-cols-3">
-          {projects.length > 0 &&
-            projects.map((project) => (
-              <ProjectCard key={project.name} project={project} />
+        <div className="grid md:grid-cols-3">
+          {data.length > 0 &&
+            data.map((project) => (
+              <Project key={project.name} project={project} />
             ))}
         </div>
       </div>

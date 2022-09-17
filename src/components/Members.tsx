@@ -1,48 +1,44 @@
-import Image from "next/image";
-import H from "./layouts/Text";
+import { IoLogoLinkedin } from "react-icons/io5";
+import { HIGHLIGHT } from "../styles";
 import Topics from "./Topics";
 
-interface Member {
-  element: string;
+interface MemberProps {
+  id: string;
   name: string;
   role: string;
   interests: string[];
   linkedin?: string;
 }
 
-function MemberCard({ member }: { member: Member }) {
-  return (
-    <a
-      href={member.linkedin && `https://linkedin.com/in/${member.linkedin}`}
-      className="p-3 m-4 border-gray-400 border-[1px] rounded-md items-center min-w-[260px] max-w-[260px]"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <Image
-        src={`/images/members/${member.element}.png`}
-        width={256}
-        height={256}
-      />
-      <div className="text-center">
-        <h2>{member.name}</h2>
-        <H>{member.role}</H>
-      </div>
-      <Topics key={member.name} topics={member.interests} />
-    </a>
-  );
-}
-
-export default function Members({ members }: { members: Member[] }) {
+export default function Members({ members }: { members: MemberProps[] }) {
   return (
     <div id="members">
-      <h1 className="text-3xl sm:text-5xl text-center font-extrabold py-4">
-        Our Members
-      </h1>
+      <div className="text-center">
+        <h1 className="text-3xl sm:text-5xl font-extrabold py-4">Members</h1>
+        <p className="text-xl">
+          there is a plenty of people with different roles that invest their
+          time in the product development.
+        </p>
+      </div>
       <div className="flex items-center justify-center">
-        <div className="overflow-x-scroll flex flex-nowrap md:grid md:grid-cols-3">
+        <div className="grid md:grid-cols-3">
           {members.length > 0 &&
             members.map((member) => (
-              <MemberCard key={member.element} member={member} />
+              <div className="p-3 m-4 border-gray-400 border-[1px] rounded-md items-center max-w-[300px]">
+                <div className="text-center">
+                  <h1 className="text-2xl">{member.name}</h1>
+                  <span className={HIGHLIGHT}>{member.role}</span>
+                </div>
+                {member.linkedin && (
+                  <a
+                    className="text-sm flex items-center gap-2 px-4 py-2 border rounded-xl w-max mx-auto my-2"
+                    href={`https://linkedin.com/in/${member.linkedin}`}
+                  >
+                    <IoLogoLinkedin size={16} /> Linkedin
+                  </a>
+                )}
+                <Topics key={member.name} topics={member.interests} />
+              </div>
             ))}
         </div>
       </div>
