@@ -15,7 +15,7 @@ function About() {
         <p className="text-lg sm:text-2xl my-4">
           Jolshylar is a Kazakhstani{" "}
           <span className={HIGHLIGHT}>Software Development</span> team mostly
-          focused on Web/Mobile Development.
+          focused on frontend-heavy web.
         </p>
       </div>
       {/* Go to Members */}
